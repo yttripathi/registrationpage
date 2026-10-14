@@ -13,10 +13,10 @@ const showProducts = async () => {
     img.src = product.thumbnail;
     img.alt = "product img here";
 
-    const title = document.createElement("h1");
+    const title = document.createElement("h3");
     title.innerText = product.title;
 
-    const price = document.createElement("h2");
+    const price = document.createElement("h4");
     price.innerText = `$${product.price}`;
 
     const incrementBtn = document.createElement("button");
@@ -40,6 +40,10 @@ const showProducts = async () => {
     incrementBtn.addEventListener("click", () => {
       counter++;
       span.innerText = counter;
+      localStorage.setItem("id",product.thumbnail);
+      localStorage.setItem("image", product.thumbnail);
+      localStorage.setItem("id", product.thumbnail);
+      localStorage.setItem("id", product.thumbnail);
     });
     decrementBtn.addEventListener("click", () => {
       if (counter > 0) {
